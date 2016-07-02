@@ -62,8 +62,8 @@ public class Player_Script : MonoBehaviour
 
 		GData bipolarMidpoint = gs.getBipolarMidpoint();
 		if (bipolarMidpoint != null && bipolarMidpoint.getIntensityInGauss () > 0) {
-			moveHorizontal = -(bipolarMidpoint.getX () - 0.5f) * 2;
-			moveVertical = (bipolarMidpoint.getY () - 0.5f)  * 2;
+			moveHorizontal = (bipolarMidpoint.getX () - 0.5f) * 2;
+			moveVertical = -(bipolarMidpoint.getY () - 0.5f)  * 2;
 
 			float angle = -bipolarMidpoint.getAngle () * Mathf.Rad2Deg;
 			this.transform.rotation = Quaternion.Euler(0,0,angle);
